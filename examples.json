@@ -1,0 +1,62 @@
+[
+  {
+    "label": "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+    "input": {
+      "ureia": "0",
+      "hb": "0",
+      "pas": "0",
+      "fc": true
+    },
+    "expected": {
+      "score": 1,
+      "level": "low"
+    },
+    "originalInput": {
+      "ureia": "0",
+      "hb": "0",
+      "pas": "0",
+      "fc": true
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Ureia 39–47 e melena: 3 pontos (internar)",
+    "input": {
+      "ureia": "2",
+      "hb": "0",
+      "pas": "0",
+      "melena": true
+    },
+    "expected": {
+      "score": 3,
+      "level": "mid"
+    },
+    "originalInput": {
+      "ureia": "2",
+      "hb": "0",
+      "pas": "0",
+      "melena": true
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+    "input": {
+      "ureia": "3",
+      "hb": "3",
+      "pas": "0",
+      "fc": true
+    },
+    "expected": {
+      "score": 7,
+      "level": "high"
+    },
+    "originalInput": {
+      "ureia": "3",
+      "hb": "3",
+      "pas": "0",
+      "fc": true
+    },
+    "expandedZeroOptions": []
+  }
+]

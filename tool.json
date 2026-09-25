@@ -1,0 +1,299 @@
+{
+  "tool": {
+    "id": "glasgow-blatchford",
+    "title": "Escore de Glasgow-Blatchford",
+    "short": "Hemorragia digestiva alta: alta precoce ou intervenção",
+    "desc": "Calcule o escore de Glasgow-Blatchford na hemorragia digestiva alta: identifica quem pode ter alta sem endoscopia urgente e quem precisa de intervenção.",
+    "lead": "Escore pré-endoscópico que estima a necessidade de transfusão, endoscopia terapêutica ou cirurgia na hemorragia digestiva alta, usando ureia, hemoglobina, sinais vitais e comorbidades.",
+    "spec": [
+      "endoscopia",
+      "gastroenterologia",
+      "medicina-de-emergencia",
+      "cirurgia-geral"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "ureia",
+        "Ureia sérica",
+        "sel",
+        {
+          "opts": {
+            "0": "&lt; 39 mg/dL (&lt; 6,5 mmol/L)",
+            "2": "39 a 47 mg/dL (6,5 a 7,9 mmol/L)",
+            "3": "48 a 59 mg/dL (8,0 a 9,9 mmol/L)",
+            "4": "60 a 149 mg/dL (10,0 a 24,9 mmol/L)",
+            "6": "≥ 150 mg/dL (≥ 25 mmol/L)"
+          }
+        }
+      ],
+      [
+        "hb",
+        "Hemoglobina",
+        "sel",
+        {
+          "opts": {
+            "0": "Homem ≥ 13 g/dL ou mulher ≥ 12 g/dL",
+            "1": "Homem 12 a 12,9 ou mulher 10 a 11,9 g/dL",
+            "3": "Homem 10 a 11,9 g/dL",
+            "6": "&lt; 10 g/dL (ambos os sexos)"
+          }
+        }
+      ],
+      [
+        "pas",
+        "Pressão sistólica",
+        "sel",
+        {
+          "opts": {
+            "0": "≥ 110 mmHg",
+            "1": "100 a 109 mmHg",
+            "2": "90 a 99 mmHg",
+            "3": "&lt; 90 mmHg"
+          }
+        }
+      ],
+      [
+        "fc",
+        "Frequência cardíaca ≥ 100 bpm",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "melena",
+        "Melena",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "sincope",
+        "Síncope",
+        "chk",
+        {
+          "pts": 2
+        }
+      ],
+      [
+        "hepat",
+        "Doença hepática (atual ou prévia)",
+        "chk",
+        {
+          "pts": 2
+        }
+      ],
+      [
+        "icc",
+        "Insuficiência cardíaca",
+        "chk",
+        {
+          "pts": 2
+        }
+      ]
+    ],
+    "score": {
+      "label": "Glasgow-Blatchford",
+      "unit": "",
+      "bands": [
+        [
+          0,
+          "low",
+          "Muito baixo risco (0 a 1): candidato a manejo ambulatorial",
+          "Pode ter alta sem endoscopia urgente, com endoscopia ambulatorial (Stanley 2017; ESGE 2021)."
+        ],
+        [
+          2,
+          "mid",
+          "Risco não baixo (2 a 6): internar e fazer endoscopia",
+          "Endoscopia em até 24 h após estabilização hemodinâmica."
+        ],
+        [
+          7,
+          "high",
+          "Risco alto (≥ 7): maior chance de precisar de terapia endoscópica",
+          "Corte ótimo para prever tratamento endoscópico (Stanley 2017). Estabilizar, transfundir se Hb &lt; 7 g/dL (ou &lt; 8 g/dL com doença cardiovascular) e endoscopia em até 24 h."
+        ]
+      ]
+    },
+    "formula": "<p>Soma de pontos: ureia (0 a 6), hemoglobina conforme o sexo (0 a 6), pressão sistólica (0 a 3), FC ≥ 100 (1), melena (1), síncope (2), doença hepática (2) e insuficiência cardíaca (2). Total de 0 a 23.</p><p>Ureia em mg/dL = mmol/L × 6,0 (a ureia, não o BUN).</p>",
+    "table": [
+      [
+        "Pontos",
+        "Interpretação"
+      ],
+      [
+        "0 a 1",
+        "Muito baixo risco: alta com endoscopia ambulatorial"
+      ],
+      [
+        "2 a 6",
+        "Internar; endoscopia em até 24 h"
+      ],
+      [
+        "≥ 7",
+        "Maior probabilidade de terapia endoscópica"
+      ]
+    ],
+    "tips": [
+      "Use o escore <strong>antes</strong> da endoscopia; com 0 ou 1 ponto, a chance de precisar de intervenção ou morrer é muito baixa.",
+      "O escore prevê necessidade de intervenção, não mortalidade: para prognóstico de óbito, veja o Rockall.",
+      "Atenção à unidade: no Brasil o laboratório libera a <strong>ureia</strong>; se vier o BUN, multiplique por 2,14 para obter a ureia em mg/dL.",
+      "Sangramento varicoso suspeito (cirrose) muda a conduta independentemente do escore: vasoconstritor, antibiótico e endoscopia em até 12 h."
+    ],
+    "sources": [
+      [
+        "Blatchford O, Murray WR, Blatchford M. A risk score to predict need for treatment for upper-gastrointestinal haemorrhage. Lancet, 2000.",
+        "https://doi.org/10.1016/S0140-6736(00)02816-6"
+      ],
+      [
+        "Stanley AJ et al. Comparison of risk scoring systems for patients presenting with upper gastrointestinal bleeding: international multicentre prospective study. BMJ, 2017.",
+        "https://doi.org/10.1136/bmj.i6432"
+      ],
+      [
+        "Gralnek IM et al. Endoscopic diagnosis and management of nonvariceal upper gastrointestinal hemorrhage (NVUGIH): European Society of Gastrointestinal Endoscopy (ESGE) Guideline – Update 2021. Endoscopy, 2021.",
+        "https://doi.org/10.1055/a-1369-5274"
+      ]
+    ],
+    "cases": [
+      [
+        "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+        {
+          "ureia": "0",
+          "hb": "0",
+          "pas": "0",
+          "fc": true
+        },
+        {
+          "score": 1,
+          "level": "low"
+        }
+      ],
+      [
+        "Ureia 39–47 e melena: 3 pontos (internar)",
+        {
+          "ureia": "2",
+          "hb": "0",
+          "pas": "0",
+          "melena": true
+        },
+        {
+          "score": 3,
+          "level": "mid"
+        }
+      ],
+      [
+        "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+        {
+          "ureia": "3",
+          "hb": "3",
+          "pas": "0",
+          "fc": true
+        },
+        {
+          "score": 7,
+          "level": "high"
+        }
+      ]
+    ],
+    "batch": "renal-digestivo",
+    "kind": "Escore",
+    "config": {
+      "unit": "",
+      "label": "Glasgow-Blatchford",
+      "fields": [
+        [
+          "ureia",
+          "sel",
+          0
+        ],
+        [
+          "hb",
+          "sel",
+          0
+        ],
+        [
+          "pas",
+          "sel",
+          0
+        ],
+        [
+          "fc",
+          "chk",
+          1
+        ],
+        [
+          "melena",
+          "chk",
+          1
+        ],
+        [
+          "sincope",
+          "chk",
+          2
+        ],
+        [
+          "hepat",
+          "chk",
+          2
+        ],
+        [
+          "icc",
+          "chk",
+          2
+        ]
+      ],
+      "bands": [
+        [
+          0,
+          "low",
+          "Muito baixo risco (0 a 1): candidato a manejo ambulatorial",
+          "Pode ter alta sem endoscopia urgente, com endoscopia ambulatorial (Stanley 2017; ESGE 2021)."
+        ],
+        [
+          2,
+          "mid",
+          "Risco não baixo (2 a 6): internar e fazer endoscopia",
+          "Endoscopia em até 24 h após estabilização hemodinâmica."
+        ],
+        [
+          7,
+          "high",
+          "Risco alto (≥ 7): maior chance de precisar de terapia endoscópica",
+          "Corte ótimo para prever tratamento endoscópico (Stanley 2017). Estabilizar, transfundir se Hb &lt; 7 g/dL (ou &lt; 8 g/dL com doença cardiovascular) e endoscopia em até 24 h."
+        ]
+      ]
+    },
+    "areaId": "renal-digestivo",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/renal-digestivo.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/renal-digestivo.php",
+    "sha256": "95087d729438637d36e1a49af04d8de0fe1d9f7876443084443906a9281ef107",
+    "bytes": 109421
+  },
+  "clinicalValidation": "not-performed"
+}
