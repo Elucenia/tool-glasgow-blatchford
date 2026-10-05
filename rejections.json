@@ -1,0 +1,287 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field ureia",
+    "input": {
+      "hb": "0",
+      "pas": "0",
+      "fc": true,
+      "melena": false,
+      "sincope": false,
+      "hepat": false,
+      "icc": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "ureia"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field ureia",
+    "input": {
+      "ureia": "",
+      "hb": "0",
+      "pas": "0",
+      "fc": true,
+      "melena": false,
+      "sincope": false,
+      "hepat": false,
+      "icc": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "ureia"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option ureia",
+    "input": {
+      "ureia": "__ELUCENIA_INVALID_OPTION__",
+      "hb": "0",
+      "pas": "0",
+      "fc": true,
+      "melena": false,
+      "sincope": false,
+      "hepat": false,
+      "icc": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "ureia"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field hb",
+    "input": {
+      "ureia": "0",
+      "pas": "0",
+      "fc": true,
+      "melena": false,
+      "sincope": false,
+      "hepat": false,
+      "icc": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "hb"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field hb",
+    "input": {
+      "ureia": "0",
+      "hb": "",
+      "pas": "0",
+      "fc": true,
+      "melena": false,
+      "sincope": false,
+      "hepat": false,
+      "icc": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "hb"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option hb",
+    "input": {
+      "ureia": "0",
+      "hb": "__ELUCENIA_INVALID_OPTION__",
+      "pas": "0",
+      "fc": true,
+      "melena": false,
+      "sincope": false,
+      "hepat": false,
+      "icc": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "hb"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field pas",
+    "input": {
+      "ureia": "0",
+      "hb": "0",
+      "fc": true,
+      "melena": false,
+      "sincope": false,
+      "hepat": false,
+      "icc": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field pas",
+    "input": {
+      "ureia": "0",
+      "hb": "0",
+      "pas": "",
+      "fc": true,
+      "melena": false,
+      "sincope": false,
+      "hepat": false,
+      "icc": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option pas",
+    "input": {
+      "ureia": "0",
+      "hb": "0",
+      "pas": "__ELUCENIA_INVALID_OPTION__",
+      "fc": true,
+      "melena": false,
+      "sincope": false,
+      "hepat": false,
+      "icc": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean fc",
+    "input": {
+      "ureia": "0",
+      "hb": "0",
+      "pas": "0",
+      "fc": "2",
+      "melena": false,
+      "sincope": false,
+      "hepat": false,
+      "icc": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "fc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean melena",
+    "input": {
+      "ureia": "0",
+      "hb": "0",
+      "pas": "0",
+      "fc": true,
+      "melena": "2",
+      "sincope": false,
+      "hepat": false,
+      "icc": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "melena"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean sincope",
+    "input": {
+      "ureia": "0",
+      "hb": "0",
+      "pas": "0",
+      "fc": true,
+      "melena": false,
+      "sincope": "2",
+      "hepat": false,
+      "icc": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "sincope"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean hepat",
+    "input": {
+      "ureia": "0",
+      "hb": "0",
+      "pas": "0",
+      "fc": true,
+      "melena": false,
+      "sincope": false,
+      "hepat": "2",
+      "icc": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "hepat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean icc",
+    "input": {
+      "ureia": "0",
+      "hb": "0",
+      "pas": "0",
+      "fc": true,
+      "melena": false,
+      "sincope": false,
+      "hepat": false,
+      "icc": "2"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "icc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

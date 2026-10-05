@@ -1,0 +1,109 @@
+<!-- ELUCENIA technical documentation · glasgow-blatchford · hi · no clinical/professional/rights approval -->
+
+# Glasgow-Blatchford स्कोर
+
+[शर्तें, स्रोत और अनुमतियाँ](https://elucenia.org/hi/tools/glasgow-blatchford)
+
+## उपयोग कैसे करें
+
+पोर्टल पर उपकरण का उपयोग करें या स्थानीय HTTP सर्वर के माध्यम से index.html खोलें। भाषा चुनें, फ़ील्ड भरें और गणना करें।
+
+## इनपुट और इकाइयाँ
+
+### सीरम यूरिया
+
+`ureia`
+
+- `0` — \< 39 mg/dL (\< 6,5 mmol/L)
+- `2` — 39 से 47 mg/dL (6.5 से 7.9 mmol/L)
+- `3` — 48 से 59 mg/dL (8.0 से 9.9 mmol/L)
+- `4` — 60 से 149 mg/dL (10.0 से 24.9 mmol/L)
+- `6` — ≥ 150 mg/dL (≥ 25 mmol/L)
+
+### हीमोग्लोबिन
+
+`hb`
+
+- `0` — पुरुष ≥ 13 g/dL या महिला ≥ 12 g/dL
+- `1` — पुरुष 12 से 12.9 या महिला 10 से 11.9 g/dL
+- `3` — पुरुष 10 से 11.9 g/dL
+- `6` — \< 10 g/dL (दोनों लिंग)
+
+### सिस्टोलिक दबाव
+
+`pas`
+
+- `0` — ≥ 110 mmHg
+- `1` — 100 से 109 mmHg
+- `2` — 90 से 99 mmHg
+- `3` — \< 90 mmHg
+
+### हृदय गति ≥ 100 bpm
+
+`fc`
+
+### मीलीना
+
+`melena`
+
+### बेहोशी
+
+`sincope`
+
+### लिवर रोग (वर्तमान या पूर्व)
+
+`hepat`
+
+### हृदय विफलता
+
+`icc`
+
+## विधि का संस्करण
+
+GBS/Blatchford 2000: 8 चर, कुल 0–23, यूरिया, BUN नहीं
+
+## दस्तावेज़ित सूत्र
+
+योग: यूरिया (0 से 6), लिंग अनुसार Hb (0 से 6), सिस्टोलिक BP (0 से 3), HR ≥100 (1), मेलिना (1), बेहोशी (2), यकृत रोग (2), हृदय विफलता (2)। कुल 0 से 23।
+
+यूरिया mg/dL = mmol/L × 6.0 (यूरिया, BUN नहीं)।
+
+## सीमाएँ और जनसमूह
+
+2000 Glasgow-Blatchford ऊपरी जठरांत्रीय रक्तस्राव की शुरुआती प्रस्तुति पर उपचार की आवश्यकता का स्तरीकरण करने के लिए विकसित हुआ था। स्कोर अकेले छुट्टी देने या बाह्यरोगी प्रबंधन की अनुमति नहीं देता। यूरिया और हीमोग्लोबिन की इकाइयाँ, सह-रोगों की परिभाषाएँ तथा बाद के प्रोटोकॉल के कटऑफ प्रयुक्त संस्करण के अनुरूप होने चाहिए। Dakik 2017 के प्राथमिक अध्ययन की तालिका 2(d) में यूरिया ≥ 10 से ≤ 25 mmol/L को 4 अंक और \> 25 mmol/L को 6 अंक दिया गया है; स्थानीय लेबल ≥ 25 mmol/L पर 6 अंक देता है। इस समीक्षा में Blatchford 2000 की मूल तालिका प्राप्त नहीं हुई। चुनी गई श्रेणियों का योग जाँचा गया, लेकिन 25 mmol/L की सटीक सीमा और mg/dL में गोल किए अंतराल अभी निर्णीत नहीं हैं।
+
+## संदर्भ
+
+- [Blatchford O, Murray WR, Blatchford M. A risk score to predict need for treatment for upper-gastrointestinal haemorrhage. Lancet, 2000.](https://doi.org/10.1016/S0140-6736(00)02816-6)
+
+- [Stanley AJ et al. Comparison of risk scoring systems for patients presenting with upper gastrointestinal bleeding: international multicentre prospective study. BMJ, 2017.](https://doi.org/10.1136/bmj.i6432)
+
+- [Gralnek IM et al. Endoscopic diagnosis and management of nonvariceal upper gastrointestinal hemorrhage (NVUGIH): European Society of Gastrointestinal Endoscopy (ESGE) Guideline – Update 2021. Endoscopy, 2021.](https://doi.org/10.1055/a-1369-5274)
+
+- [Dakik HK et al. Accuracy of Glasgow-Blatchford, AIMS65, and Rockall Scores to Predict Outcomes in Upper Gastrointestinal Bleeding. 2017, Table 2(d); reproduced GBS table.](https://doi.org/10.1155/2017/3171697)
+
+## तकनीकी परीक्षण दोहराएँ
+
+दर्ज कृत्रिम मामलों को दोहराने के लिए इस रिपॉज़िटरी की मूल निर्देशिका में node test.cjs चलाएँ। मूल इनपुट, अपेक्षित परिणाम और सहनशीलता सीमाएँ सुरक्षित रखी गई हैं। तकनीकी परीक्षण नैदानिक सत्यापन नहीं हैं।
+
+```sh
+node test.cjs
+```
+
+tool.json में स्रोत, संस्करण और समीक्षा का दायरा दिया गया है। examples.json में कृत्रिम इनपुट और अपेक्षित परिणाम सुरक्षित हैं; results.json में प्राप्त परिणाम दर्ज हैं।
+
+[रिकॉर्ड और संदर्भ](../tool.json) · [JavaScript कोड](../calculator.js) · [संदर्भ मामले](../examples.json) · [results.json](../results.json)
+
+## समीक्षा और उपयोग की शर्तें
+
+स्वतंत्र नैदानिक समीक्षा नहीं की गई है।
+
+यह इंटरफ़ेस लेखकों द्वारा किया गया अनुवाद है, कोई आधिकारिक या प्रमाणित संस्करण नहीं। स्वतंत्र नैदानिक समीक्षा, पेशेवर भाषाई समीक्षा और उपकरणों के अधिकारों की अनुमति की प्रक्रिया पूरी नहीं हुई है।
+
+सूत्र या वर्गीकरण का परिणाम। व्याख्या, कार्यवाही और उपयुक्तता पेशेवर मूल्यांकन और चुने गए स्रोत पर निर्भर है।
+
+## लाइसेंस और श्रेय
+
+Apache-2.0 केवल ELUCENIA के कोड पर लागू होता है। उपकरणों, प्रकाशनों, अनुवादों और डेटा के अधिकार उनके संबंधित अधिकारधारकों के पास रहते हैं। LICENSE और NOTICE सुरक्षित रखें।
+
+ELUCENIA · Felipe Guedes · Copyright © 2026

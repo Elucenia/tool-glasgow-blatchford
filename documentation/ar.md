@@ -1,0 +1,109 @@
+<!-- ELUCENIA technical documentation · glasgow-blatchford · ar · no clinical/professional/rights approval -->
+
+# درجة Glasgow-Blatchford
+
+[الشروط والمصادر والأذونات](https://elucenia.org/ar/tools/glasgow-blatchford)
+
+## كيفية الاستخدام
+
+استخدم الأداة في البوابة أو افتح index.html عبر خادم HTTP محلي. اختر اللغة، وأكمل الحقول، ثم أجرِ الحساب.
+
+## المدخلات والوحدات
+
+### يوريا المصل
+
+`ureia`
+
+- `0` — \< ٣٩ mg/dL (\< ٦٫٥ mmol/L)
+- `2` — ٣٩ إلى ٤٧ mg/dL (٦٫٥ إلى ٧٫٩ mmol/L)
+- `3` — ٤٨ إلى ٥٩ mg/dL (٨٫٠ إلى ٩٫٩ mmol/L)
+- `4` — ٦٠ إلى ١٤٩ mg/dL (١٠٫٠ إلى ٢٤٫٩ mmol/L)
+- `6` — ≥ ١٥٠ mg/dL (≥ ٢٥ mmol/L)
+
+### الهيموغلوبين
+
+`hb`
+
+- `0` — رجل ≥ ١٣ g/dL أو امرأة ≥ ١٢ g/dL
+- `1` — رجل ١٢ إلى ١٢٫٩ أو امرأة ١٠ إلى ١١٫٩ g/dL
+- `3` — رجل ١٠ إلى ١١٫٩ g/dL
+- `6` — \< ١٠ g/dL (كلا الجنسين)
+
+### الضغط الانقباضي
+
+`pas`
+
+- `0` — ≥ ١١٠ mmHg
+- `1` — ١٠٠ إلى ١٠٩ mmHg
+- `2` — ٩٠ إلى ٩٩ mmHg
+- `3` — \< ٩٠ mmHg
+
+### معدل ضربات القلب ≥ ١٠٠ bpm
+
+`fc`
+
+### براز أسود قطراني
+
+`melena`
+
+### إغماء
+
+`sincope`
+
+### مرض كبدي (حالي أو سابق)
+
+`hepat`
+
+### فشل القلب
+
+`icc`
+
+## إصدار الطريقة
+
+GBS/Blatchford 2000: 8 متغيرات، مجموع 0–23، يوريا لا BUN
+
+## المعادلة الموثقة
+
+جمع: يوريا (0 إلى 6)، هيموغلوبين بحسب الجنس (0 إلى 6)، ضغط انقباضي (0 إلى 3)، نبض ≥100 (1)، براز أسود (1)، إغماء (2)، مرض كبدي (2)، فشل قلبي (2). المجموع 0 إلى 23.
+
+يوريا mg/dL = mmol/L × 6.0 (اليوريا لا BUN).
+
+## الحدود والفئة السكانية
+
+طُورت Glasgow-Blatchford لعام ٢٠٠٠ عند الحضور الأولي بسبب نزف الجهاز الهضمي العلوي، لتصنيف الحاجة إلى العلاج. لا تسمح الدرجة بمفردها بالخروج أو التدبير في العيادات الخارجية. يجب أن تتطابق وحدات اليوريا والهيموغلوبين وتعريف الأمراض المصاحبة وحدود البروتوكولات اللاحقة مع النسخة المستخدمة. يعرض الجدول ٢(d) من دراسة Dakik 2017 الأولية اليوريا ≥ ١٠ إلى ≤ ٢٥ mmol/L بدرجة ٤ نقاط، واليوريا \> ٢٥ mmol/L بدرجة ٦ نقاط؛ ويستخدم الوصف المحلي ≥ ٢٥ mmol/L لدرجة ٦ نقاط. لم يُحصل على جدول Blatchford 2000 الأصلي في هذه المراجعة. جرت مراجعة مجموع الفئات المختارة، لكن الحد الدقيق عند ٢٥ mmol/L والمديات المقربة بوحدة mg/dL لم يُحسم أمرها.
+
+## المراجع
+
+- [Blatchford O, Murray WR, Blatchford M. A risk score to predict need for treatment for upper-gastrointestinal haemorrhage. Lancet, 2000.](https://doi.org/10.1016/S0140-6736(00)02816-6)
+
+- [Stanley AJ et al. Comparison of risk scoring systems for patients presenting with upper gastrointestinal bleeding: international multicentre prospective study. BMJ, 2017.](https://doi.org/10.1136/bmj.i6432)
+
+- [Gralnek IM et al. Endoscopic diagnosis and management of nonvariceal upper gastrointestinal hemorrhage (NVUGIH): European Society of Gastrointestinal Endoscopy (ESGE) Guideline – Update 2021. Endoscopy, 2021.](https://doi.org/10.1055/a-1369-5274)
+
+- [Dakik HK et al. Accuracy of Glasgow-Blatchford, AIMS65, and Rockall Scores to Predict Outcomes in Upper Gastrointestinal Bleeding. 2017, Table 2(d); reproduced GBS table.](https://doi.org/10.1155/2017/3171697)
+
+## إعادة إجراء الاختبارات التقنية
+
+شغّل node test.cjs في المجلد الجذري لهذا المستودع لتكرار الحالات الاصطناعية المسجلة. تُحفظ المدخلات والنتائج المتوقعة وحدود التفاوت الأصلية. لا تُعدّ الاختبارات التقنية تحققًا سريريًا.
+
+```sh
+node test.cjs
+```
+
+يحتوي tool.json على المصادر والإصدار ونطاق المراجعة. يحتفظ examples.json بالمدخلات والنتائج المتوقعة للحالات الاصطناعية؛ ويسجل results.json النتائج التي تم الحصول عليها.
+
+[السجل والمراجع](../tool.json) · [شيفرة JavaScript](../calculator.js) · [حالات مرجعية](../examples.json) · [results.json](../results.json)
+
+## المراجعة وشروط الاستخدام
+
+لم تُجرَ مراجعة سريرية مستقلة.
+
+هذه الواجهة ترجمة أعدّها مؤلفوها، وليست إصدارًا رسميًا أو معتمدًا. لم تُجرَ مراجعة سريرية مستقلة أو مراجعة لغوية مهنية، ولم تُستكمل الموافقة على حقوق استخدام الأدوات.
+
+نتيجة المعادلة أو التصنيف. يعتمد التفسير والتصرف ومدى الانطباق على التقييم المهني والمصدر المحدد.
+
+## الترخيص ونسبة العمل إلى أصحابه
+
+ينطبق Apache-2.0 على كود ELUCENIA فقط. تبقى حقوق الأدوات والمنشورات والترجمات والبيانات لأصحابها المعنيين. احتفظ بملفّي LICENSE وNOTICE.
+
+ELUCENIA · Felipe Guedes · Copyright © 2026

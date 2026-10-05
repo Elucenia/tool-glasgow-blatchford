@@ -5,13 +5,13 @@
     "short": "Hemorragia digestiva alta: alta precoce ou intervenção",
     "desc": "Calcule o escore de Glasgow-Blatchford na hemorragia digestiva alta: identifica quem pode ter alta sem endoscopia urgente e quem precisa de intervenção.",
     "lead": "Escore pré-endoscópico que estima a necessidade de transfusão, endoscopia terapêutica ou cirurgia na hemorragia digestiva alta, usando ureia, hemoglobina, sinais vitais e comorbidades.",
+    "kind": "Escore",
     "spec": [
       "endoscopia",
       "gastroenterologia",
       "medicina-de-emergencia",
       "cirurgia-geral"
     ],
-    "tier": 1,
     "fields": [
       [
         "ureia",
@@ -57,92 +57,34 @@
         "fc",
         "Frequência cardíaca ≥ 100 bpm",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "melena",
         "Melena",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "sincope",
         "Síncope",
         "chk",
-        {
-          "pts": 2
-        }
+        {}
       ],
       [
         "hepat",
         "Doença hepática (atual ou prévia)",
         "chk",
-        {
-          "pts": 2
-        }
+        {}
       ],
       [
         "icc",
         "Insuficiência cardíaca",
         "chk",
-        {
-          "pts": 2
-        }
+        {}
       ]
     ],
-    "score": {
-      "label": "Glasgow-Blatchford",
-      "unit": "",
-      "bands": [
-        [
-          0,
-          "low",
-          "Muito baixo risco (0 a 1): candidato a manejo ambulatorial",
-          "Pode ter alta sem endoscopia urgente, com endoscopia ambulatorial (Stanley 2017; ESGE 2021)."
-        ],
-        [
-          2,
-          "mid",
-          "Risco não baixo (2 a 6): internar e fazer endoscopia",
-          "Endoscopia em até 24 h após estabilização hemodinâmica."
-        ],
-        [
-          7,
-          "high",
-          "Risco alto (≥ 7): maior chance de precisar de terapia endoscópica",
-          "Corte ótimo para prever tratamento endoscópico (Stanley 2017). Estabilizar, transfundir se Hb &lt; 7 g/dL (ou &lt; 8 g/dL com doença cardiovascular) e endoscopia em até 24 h."
-        ]
-      ]
-    },
     "formula": "<p>Soma de pontos: ureia (0 a 6), hemoglobina conforme o sexo (0 a 6), pressão sistólica (0 a 3), FC ≥ 100 (1), melena (1), síncope (2), doença hepática (2) e insuficiência cardíaca (2). Total de 0 a 23.</p><p>Ureia em mg/dL = mmol/L × 6,0 (a ureia, não o BUN).</p>",
-    "table": [
-      [
-        "Pontos",
-        "Interpretação"
-      ],
-      [
-        "0 a 1",
-        "Muito baixo risco: alta com endoscopia ambulatorial"
-      ],
-      [
-        "2 a 6",
-        "Internar; endoscopia em até 24 h"
-      ],
-      [
-        "≥ 7",
-        "Maior probabilidade de terapia endoscópica"
-      ]
-    ],
-    "tips": [
-      "Use o escore <strong>antes</strong> da endoscopia; com 0 ou 1 ponto, a chance de precisar de intervenção ou morrer é muito baixa.",
-      "O escore prevê necessidade de intervenção, não mortalidade: para prognóstico de óbito, veja o Rockall.",
-      "Atenção à unidade: no Brasil o laboratório libera a <strong>ureia</strong>; se vier o BUN, multiplique por 2,14 para obter a ureia em mg/dL.",
-      "Sangramento varicoso suspeito (cirrose) muda a conduta independentemente do escore: vasoconstritor, antibiótico e endoscopia em até 12 h."
-    ],
     "sources": [
       [
         "Blatchford O, Murray WR, Blatchford M. A risk score to predict need for treatment for upper-gastrointestinal haemorrhage. Lancet, 2000.",
@@ -155,6 +97,10 @@
       [
         "Gralnek IM et al. Endoscopic diagnosis and management of nonvariceal upper gastrointestinal hemorrhage (NVUGIH): European Society of Gastrointestinal Endoscopy (ESGE) Guideline – Update 2021. Endoscopy, 2021.",
         "https://doi.org/10.1055/a-1369-5274"
+      ],
+      [
+        "Dakik HK et al. Accuracy of Glasgow-Blatchford, AIMS65, and Rockall Scores to Predict Outcomes in Upper Gastrointestinal Bleeding. 2017, Table 2(d); reproduced GBS table.",
+        "https://doi.org/10.1155/2017/3171697"
       ]
     ],
     "cases": [
@@ -198,74 +144,6 @@
         }
       ]
     ],
-    "kind": "Escore",
-    "config": {
-      "unit": "",
-      "label": "Glasgow-Blatchford",
-      "fields": [
-        [
-          "ureia",
-          "sel",
-          0
-        ],
-        [
-          "hb",
-          "sel",
-          0
-        ],
-        [
-          "pas",
-          "sel",
-          0
-        ],
-        [
-          "fc",
-          "chk",
-          1
-        ],
-        [
-          "melena",
-          "chk",
-          1
-        ],
-        [
-          "sincope",
-          "chk",
-          2
-        ],
-        [
-          "hepat",
-          "chk",
-          2
-        ],
-        [
-          "icc",
-          "chk",
-          2
-        ]
-      ],
-      "bands": [
-        [
-          0,
-          "low",
-          "Muito baixo risco (0 a 1): candidato a manejo ambulatorial",
-          "Pode ter alta sem endoscopia urgente, com endoscopia ambulatorial (Stanley 2017; ESGE 2021)."
-        ],
-        [
-          2,
-          "mid",
-          "Risco não baixo (2 a 6): internar e fazer endoscopia",
-          "Endoscopia em até 24 h após estabilização hemodinâmica."
-        ],
-        [
-          7,
-          "high",
-          "Risco alto (≥ 7): maior chance de precisar de terapia endoscópica",
-          "Corte ótimo para prever tratamento endoscópico (Stanley 2017). Estabilizar, transfundir se Hb &lt; 7 g/dL (ou &lt; 8 g/dL com doença cardiovascular) e endoscopia em até 24 h."
-        ]
-      ]
-    },
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -274,17 +152,560 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T17:23:41.381Z",
+      "total": 2560,
+      "passed": 2560,
+      "sourceRowCount": 2560,
+      "uniqueApiInputCount": 2560,
+      "sourceContextCount": 2560,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "ea16a6eefdcbc887d3f6adc817820bc280cdb46752d5b2d697ca46c91a5e2800",
+        "total": 2560,
+        "bankRowCount": 2560,
+        "uniqueApiInputCount": 2560,
+        "sourceContextCount": 2560,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/eight-organ-publication-independent-expectations-final26.json",
+            "sha256": "5b80f57281b79c15458b473abed56f641541206eb50de44726b2a078072b1288"
+          },
+          {
+            "file": "reports/review-20261003/eight-organ-functional-independent-expectations-final26.json",
+            "sha256": "441cc3061db085da51adbe70aea27a87b1a0266488513a4942d3a9abd9f5a766"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/eight-organ-source-bank-independent-check-final26.json",
+          "sha256": "def1101195ee4fab702761b71118d0da1fb7a7cbbb97ad9dbcf71c694bfaea80"
+        },
+        "packagingRequirement": "Compose reviewed source/label hashes plus metadata and freeze26 before package generation."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "sourceRows": 2560,
+        "uniqueApiInputs": 2560,
+        "duplicateRows": 0,
+        "expectationAudit": {
+          "file": "reports/review-20261003/eight-organ-publication-independent-expectations-final26.json",
+          "sha256": "5b80f57281b79c15458b473abed56f641541206eb50de44726b2a078072b1288"
+        }
+      },
+      "scope": "Exact integer weighted sum of 2560 stored selected category/flag tuples for glasgow-blatchford. Clinical item eligibility/administration, labels/rubrics, risk categories, prognosis, treatment and complete instrument conformance excluded. Clinical, professional translation and source rights approval not performed.",
+      "sources": [
+        {
+          "id": "glasgow-blatchford",
+          "declaredEdition": "Blatchford2000",
+          "numericEvidenceEdition": "Dakik2017 primary study Table2(d) reproducing GBS; original2000 abstract independently read",
+          "url": "https://pdfs.semanticscholar.org/71c2/0d60529339cd261f350fb524b5dd5a2f0bcb.pdf",
+          "doi": "10.1155/2017/3171697",
+          "access": "Original2000 PubMed abstract read (1748 derivation/197 validation acuteUGIB). Original table not obtained. Primary2017 PDF downloaded and Table2(d) visually inspected. Stanley2017 primary study read separately; its supplementary scoringTable1 was not obtained.",
+          "readScope": [
+            "Blatchford2000 original abstract",
+            "Dakik2017 Methods/eligibility and Table2(d), PDFp4",
+            "Stanley2017 Methods/Results (not scoring supplement)"
+          ],
+          "notVerified": [
+            "Original2000 scoringtable",
+            "Automated lab conversion, sex eligibility or exact25mmol/L classification",
+            "Clinical disposition, intervention decision or patient probabilities"
+          ],
+          "sourceComponent": "Selected point total; SOFA additional six representative/unambiguous component outputs only",
+          "sourceFindings": [
+            {
+              "status": "reproduction-boundary-difference",
+              "detail": "2017 Table2(d) prints urea≥10 to≤25=4 and>25=6, whereas current schema uses≥25=6. Exact25 and rounded mg/dL ranges are not certified by the selected-point sum test."
+            }
+          ]
+        }
+      ],
+      "evidencePath": "reports/review-20261003/eight-organ-source-bank-independent-check-final26.json",
+      "evidenceSha256": "def1101195ee4fab702761b71118d0da1fb7a7cbbb97ad9dbcf71c694bfaea80",
+      "originalEvidence": {
+        "file": "reports/review-20261003/eight-organ-functional-independent-source-check-final26.json",
+        "sha256": "591c331b87a338053921efb483bd7e23b1741285439c4bbce0e3e6fd4918f751"
+      },
+      "independentPeer": {
+        "status": "passed",
+        "requiredScope": "Independent bank/metadata/helper review; source label/version/UN/distance patches are separately owned.",
+        "recordedAt": "2026-10-04T18:58:09.869Z",
+        "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+        "previousStatus": {
+          "status": "pending",
+          "requiredScope": "Independent bank/metadata/helper review; source label/version/UN/distance patches are separately owned."
+        },
+        "peer": {
+          "file": "reports/review-20261003/eight-organ-source-banks-root-peer-final26.json",
+          "sha256": "411b6e23e0dd3262149ce637566e50c3ba61f424bb997164c25c1862c3f603d0",
+          "summary": {
+            "checks": 55762,
+            "failed": 0,
+            "helperAssertions": 50346,
+            "sourceRows": 6947,
+            "uniqueInputObjects": 6947,
+            "freshNodeExecutions": 20841,
+            "methods": 137,
+            "allSourceRows": 60865,
+            "allUniqueInputs": 60792,
+            "allDuplicateRows": 73
+          },
+          "scope": "Root peer of46exact preimages,6947 independently frozen source input/expected objects and explicit seven-method additive crosscheck; SOFA six frozen source component scores and total only. Root replays fresh3public adapters. Excludes clinical rubrics, ambiguous table equalities, NIHSS UN, Barthel mobility/enema wording and patient risk/diagnosis. Exact helper reverse restores all27 prior scopes; realm normalization preserves exact ordered key identities."
+        },
+        "application": {
+          "file": "reports/review-20261003/eight-organ-source-evidence-application-final26.json",
+          "sha256": "4460d9fa07f83af63211052014fa73f12bfb1a3aed0e0bff076925f16b77682b"
+        },
+        "reviewedBankScope": "Exact integer weighted sum of 2560 stored selected category/flag tuples for glasgow-blatchford. Clinical item eligibility/administration, labels/rubrics, risk categories, prognosis, treatment and complete instrument conformance excluded. Clinical, professional translation and source rights approval not performed.",
+        "currentBinding": {
+          "source26BankSha256": "e544e57c5a85fdac7cc015c3fcaf62a944a08aaf04ecde69eda6e9d46662670d",
+          "implementations": [
+            {
+              "file": "apps/website/private/tool-code/glasgow-blatchford/calculator.js",
+              "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+            },
+            {
+              "file": "apps/dashboard/private/tool-code/glasgow-blatchford/calculator.js",
+              "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+            },
+            {
+              "file": "apps/command-center/private/tool-code/glasgow-blatchford/calculator.js",
+              "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+            }
+          ],
+          "subsequentReviewedRebinds": []
+        },
+        "originalFailuresAndScopeQualificationsPreserved": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "actualAdapterExecutions": 7680,
+      "actualVmExecutions": 7680,
+      "implementations": [
+        {
+          "app": "website",
+          "id": "glasgow-blatchford",
+          "file": "apps/website/private/tool-code/glasgow-blatchford/calculator.js",
+          "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+        },
+        {
+          "app": "dashboard",
+          "id": "glasgow-blatchford",
+          "file": "apps/dashboard/private/tool-code/glasgow-blatchford/calculator.js",
+          "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+        },
+        {
+          "app": "command-center",
+          "id": "glasgow-blatchford",
+          "file": "apps/command-center/private/tool-code/glasgow-blatchford/calculator.js",
+          "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+        }
+      ],
+      "qualifications": [
+        "Exact integer weighted sum of 2560 stored selected category/flag tuples for glasgow-blatchford. Clinical item eligibility/administration, labels/rubrics, risk categories, prognosis, treatment and complete instrument conformance excluded. Clinical, professional translation and source rights approval not performed.",
+        "NIHSS UN handling, GBS exact25 lab boundary, SOFA source boundaries/dose rubrics, Barthel yard/meter and enema rubrics, Katz original1963A–G and clinical grades/probabilities are not approved by score tests. Separately owned field/source-edition patches must be reviewed and composed.",
+        "All862 historical fixtures and their tolerances remain byte-identical. Four inline samples are only a subset of this complete hashed bank.",
+        "Synthetic selected-category combinations may not be clinically admissible patient assessments. No professional/clinical/rights/full-method approval inferred."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "GBS/Blatchford 2000:8 variáveis, total 0–23, ureianão BUN",
+    "implementationVersion": "glasgow-blatchford@native-2026-10-03+714ea89f6c4f",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/11073021/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Soma de pontos: ureia (0 a 6), hemoglobina conforme o sexo (0 a 6), pressão sistólica (0 a 3), FC ≥ 100 (1), melena (1), síncope (2), doença hepática (2) e insuficiência cardíaca (2). Total de 0 a 23. Ureia em mg/dL = mmol/L × 6,0 (a ureia, não o BUN).",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "ureia",
+            "label": "Ureia sérica",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "&lt; 39 mg/dL (&lt; 6,5 mmol/L)",
+              "2": "39 a 47 mg/dL (6,5 a 7,9 mmol/L)",
+              "3": "48 a 59 mg/dL (8,0 a 9,9 mmol/L)",
+              "4": "60 a 149 mg/dL (10,0 a 24,9 mmol/L)",
+              "6": "≥ 150 mg/dL (≥ 25 mmol/L)"
+            }
+          },
+          {
+            "key": "hb",
+            "label": "Hemoglobina",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Homem ≥ 13 g/dL ou mulher ≥ 12 g/dL",
+              "1": "Homem 12 a 12,9 ou mulher 10 a 11,9 g/dL",
+              "3": "Homem 10 a 11,9 g/dL",
+              "6": "&lt; 10 g/dL (ambos os sexos)"
+            }
+          },
+          {
+            "key": "pas",
+            "label": "Pressão sistólica",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "≥ 110 mmHg",
+              "1": "100 a 109 mmHg",
+              "2": "90 a 99 mmHg",
+              "3": "&lt; 90 mmHg"
+            }
+          },
+          {
+            "key": "fc",
+            "label": "Frequência cardíaca ≥ 100 bpm",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "melena",
+            "label": "Melena",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "sincope",
+            "label": "Síncope",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "hepat",
+            "label": "Doença hepática (atual ou prévia)",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "icc",
+            "label": "Insuficiência cardíaca",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "7c23f20fb2680a02338999ff96a795a9ba88cac398f43ac8ad888c9849bf78d0"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Blatchford O, Murray WR, Blatchford M. A risk score to predict need for treatment for upper-gastrointestinal haemorrhage. Lancet, 2000.",
+          "url": "https://doi.org/10.1016/S0140-6736(00)02816-6",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "A risk score to predict need for treatment for upper-gastrointestinal haemorrhage.",
+            "year": "2000",
+            "firstPublicationDate": "2000-10-01",
+            "doi": "10.1016/s0140-6736(00)02816-6",
+            "pmid": "11073021",
+            "journal": "Lancet (London, England)",
+            "authors": "Blatchford O, Murray WR, Blatchford M."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/11073021/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "22091a6586471f9336e47e87397c7cb90a3001451f07351222b6d5f44abd05f2",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Stanley AJ et al. Comparison of risk scoring systems for patients presenting with upper gastrointestinal bleeding: international multicentre prospective study. BMJ, 2017.",
+          "url": "https://doi.org/10.1136/bmj.i6432",
+          "class": "primary-publication-full-text-retrieved",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": true,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Comparison of risk scoring systems for patients presenting with upper gastrointestinal bleeding: international multicentre prospective study.",
+            "year": "2017",
+            "firstPublicationDate": "2017-01-04",
+            "doi": "10.1136/bmj.i6432",
+            "pmid": "28053181",
+            "pmcid": "PMC5217768",
+            "journal": "BMJ (Clinical research ed.)",
+            "authors": "Stanley AJ, Laine L, Dalton HR, Ngu JH, Schultz M, Abazi R, Zakko L, Thornton S, Wilkinson K, Khor CJ, Murray IA, Laursen SB, International Gastrointestinal Bleeding Consortium."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5217768/",
+          "abstractAvailable": true,
+          "fullTextSha256": "1fad8052f03890fbd843cc323892521b1c57643b15d76adc381e0ef926e0c29d",
+          "abstractSha256": "32ce07c6b6981a53e559b7b64e1b3b2156762d46848fd100b6178d4f2e10de34",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Gralnek IM et al. Endoscopic diagnosis and management of nonvariceal upper gastrointestinal hemorrhage (NVUGIH): European Society of Gastrointestinal Endoscopy (ESGE) Guideline – Update 2021. Endoscopy, 2021.",
+          "url": "https://doi.org/10.1055/a-1369-5274",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Endoscopic diagnosis and management of nonvariceal upper gastrointestinal hemorrhage (NVUGIH): European Society of Gastrointestinal Endoscopy (ESGE) Guideline - Update 2021.",
+            "year": "2021",
+            "firstPublicationDate": "2021-02-10",
+            "doi": "10.1055/a-1369-5274",
+            "pmid": "33567467",
+            "journal": "Endoscopy",
+            "authors": "Gralnek IM, Stanley AJ, Morris AJ, Camus M, Lau J, Lanas A, Laursen SB, Radaelli F, Papanikolaou IS, Cúrdia Gonçalves T, Dinis-Ribeiro M, Awadie H, Braun G, de Groot N, Udd M, Sanchez-Yague A, Neeman Z, van Hooft JE."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/33567467/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "6ee9e2e6c03c255b5cb3ebb576d6d11cc0da24860eac94d77b5d616ed2c784ad",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T17:23:41.381Z",
+        "total": 2560,
+        "passed": 2560,
+        "sourceRowCount": 2560,
+        "uniqueApiInputCount": 2560,
+        "sourceContextCount": 2560,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "ea16a6eefdcbc887d3f6adc817820bc280cdb46752d5b2d697ca46c91a5e2800",
+          "total": 2560,
+          "bankRowCount": 2560,
+          "uniqueApiInputCount": 2560,
+          "sourceContextCount": 2560,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/eight-organ-publication-independent-expectations-final26.json",
+              "sha256": "5b80f57281b79c15458b473abed56f641541206eb50de44726b2a078072b1288"
+            },
+            {
+              "file": "reports/review-20261003/eight-organ-functional-independent-expectations-final26.json",
+              "sha256": "441cc3061db085da51adbe70aea27a87b1a0266488513a4942d3a9abd9f5a766"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/eight-organ-source-bank-independent-check-final26.json",
+            "sha256": "def1101195ee4fab702761b71118d0da1fb7a7cbbb97ad9dbcf71c694bfaea80"
+          },
+          "packagingRequirement": "Compose reviewed source/label hashes plus metadata and freeze26 before package generation."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "sourceRows": 2560,
+          "uniqueApiInputs": 2560,
+          "duplicateRows": 0,
+          "expectationAudit": {
+            "file": "reports/review-20261003/eight-organ-publication-independent-expectations-final26.json",
+            "sha256": "5b80f57281b79c15458b473abed56f641541206eb50de44726b2a078072b1288"
+          }
+        },
+        "scope": "Exact integer weighted sum of 2560 stored selected category/flag tuples for glasgow-blatchford. Clinical item eligibility/administration, labels/rubrics, risk categories, prognosis, treatment and complete instrument conformance excluded. Clinical, professional translation and source rights approval not performed.",
+        "sources": [
+          {
+            "id": "glasgow-blatchford",
+            "declaredEdition": "Blatchford2000",
+            "numericEvidenceEdition": "Dakik2017 primary study Table2(d) reproducing GBS; original2000 abstract independently read",
+            "url": "https://pdfs.semanticscholar.org/71c2/0d60529339cd261f350fb524b5dd5a2f0bcb.pdf",
+            "doi": "10.1155/2017/3171697",
+            "access": "Original2000 PubMed abstract read (1748 derivation/197 validation acuteUGIB). Original table not obtained. Primary2017 PDF downloaded and Table2(d) visually inspected. Stanley2017 primary study read separately; its supplementary scoringTable1 was not obtained.",
+            "readScope": [
+              "Blatchford2000 original abstract",
+              "Dakik2017 Methods/eligibility and Table2(d), PDFp4",
+              "Stanley2017 Methods/Results (not scoring supplement)"
+            ],
+            "notVerified": [
+              "Original2000 scoringtable",
+              "Automated lab conversion, sex eligibility or exact25mmol/L classification",
+              "Clinical disposition, intervention decision or patient probabilities"
+            ],
+            "sourceComponent": "Selected point total; SOFA additional six representative/unambiguous component outputs only",
+            "sourceFindings": [
+              {
+                "status": "reproduction-boundary-difference",
+                "detail": "2017 Table2(d) prints urea≥10 to≤25=4 and>25=6, whereas current schema uses≥25=6. Exact25 and rounded mg/dL ranges are not certified by the selected-point sum test."
+              }
+            ]
+          }
+        ],
+        "evidencePath": "reports/review-20261003/eight-organ-source-bank-independent-check-final26.json",
+        "evidenceSha256": "def1101195ee4fab702761b71118d0da1fb7a7cbbb97ad9dbcf71c694bfaea80",
+        "originalEvidence": {
+          "file": "reports/review-20261003/eight-organ-functional-independent-source-check-final26.json",
+          "sha256": "591c331b87a338053921efb483bd7e23b1741285439c4bbce0e3e6fd4918f751"
+        },
+        "independentPeer": {
+          "status": "passed",
+          "requiredScope": "Independent bank/metadata/helper review; source label/version/UN/distance patches are separately owned.",
+          "recordedAt": "2026-10-04T18:58:09.869Z",
+          "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+          "previousStatus": {
+            "status": "pending",
+            "requiredScope": "Independent bank/metadata/helper review; source label/version/UN/distance patches are separately owned."
+          },
+          "peer": {
+            "file": "reports/review-20261003/eight-organ-source-banks-root-peer-final26.json",
+            "sha256": "411b6e23e0dd3262149ce637566e50c3ba61f424bb997164c25c1862c3f603d0",
+            "summary": {
+              "checks": 55762,
+              "failed": 0,
+              "helperAssertions": 50346,
+              "sourceRows": 6947,
+              "uniqueInputObjects": 6947,
+              "freshNodeExecutions": 20841,
+              "methods": 137,
+              "allSourceRows": 60865,
+              "allUniqueInputs": 60792,
+              "allDuplicateRows": 73
+            },
+            "scope": "Root peer of46exact preimages,6947 independently frozen source input/expected objects and explicit seven-method additive crosscheck; SOFA six frozen source component scores and total only. Root replays fresh3public adapters. Excludes clinical rubrics, ambiguous table equalities, NIHSS UN, Barthel mobility/enema wording and patient risk/diagnosis. Exact helper reverse restores all27 prior scopes; realm normalization preserves exact ordered key identities."
+          },
+          "application": {
+            "file": "reports/review-20261003/eight-organ-source-evidence-application-final26.json",
+            "sha256": "4460d9fa07f83af63211052014fa73f12bfb1a3aed0e0bff076925f16b77682b"
+          },
+          "reviewedBankScope": "Exact integer weighted sum of 2560 stored selected category/flag tuples for glasgow-blatchford. Clinical item eligibility/administration, labels/rubrics, risk categories, prognosis, treatment and complete instrument conformance excluded. Clinical, professional translation and source rights approval not performed.",
+          "currentBinding": {
+            "source26BankSha256": "e544e57c5a85fdac7cc015c3fcaf62a944a08aaf04ecde69eda6e9d46662670d",
+            "implementations": [
+              {
+                "file": "apps/website/private/tool-code/glasgow-blatchford/calculator.js",
+                "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+              },
+              {
+                "file": "apps/dashboard/private/tool-code/glasgow-blatchford/calculator.js",
+                "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+              },
+              {
+                "file": "apps/command-center/private/tool-code/glasgow-blatchford/calculator.js",
+                "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+              }
+            ],
+            "subsequentReviewedRebinds": []
+          },
+          "originalFailuresAndScopeQualificationsPreserved": true,
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "actualAdapterExecutions": 7680,
+        "actualVmExecutions": 7680,
+        "implementations": [
+          {
+            "app": "website",
+            "id": "glasgow-blatchford",
+            "file": "apps/website/private/tool-code/glasgow-blatchford/calculator.js",
+            "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+          },
+          {
+            "app": "dashboard",
+            "id": "glasgow-blatchford",
+            "file": "apps/dashboard/private/tool-code/glasgow-blatchford/calculator.js",
+            "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+          },
+          {
+            "app": "command-center",
+            "id": "glasgow-blatchford",
+            "file": "apps/command-center/private/tool-code/glasgow-blatchford/calculator.js",
+            "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+          }
+        ],
+        "qualifications": [
+          "Exact integer weighted sum of 2560 stored selected category/flag tuples for glasgow-blatchford. Clinical item eligibility/administration, labels/rubrics, risk categories, prognosis, treatment and complete instrument conformance excluded. Clinical, professional translation and source rights approval not performed.",
+          "NIHSS UN handling, GBS exact25 lab boundary, SOFA source boundaries/dose rubrics, Barthel yard/meter and enema rubrics, Katz original1963A–G and clinical grades/probabilities are not approved by score tests. Separately owned field/source-edition patches must be reviewed and composed.",
+          "All862 historical fixtures and their tolerances remain byte-identical. Four inline samples are only a subset of this complete hashed bank.",
+          "Synthetic selected-category combinations may not be clinically admissible patient assessments. No professional/clinical/rights/full-method approval inferred."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832",
+      "sourceAnnotationAmendment": {
+        "receipt": "reports/review-20261003/eight-organ-functional-source-corrections-candidate-final26-r4-r2.json",
+        "sourceReviewSha256": "e1a3a85edb2d38e880b320918a3738586221e4c5e7041bc83b51ec7b584385cc",
+        "previousMethodVersion": "GBS/Blatchford 2000:8 variáveis, total 0–23, ureianão BUN",
+        "scope": "Source-edition and displayed-rubric limitations only; no clinical/instrument-language/rights approval and no arithmetic changes."
+      }
+    },
+    "limits": "O Glasgow-Blatchford de 2000 foi desenvolvido na apresentação inicial de hemorragia digestiva alta para estratificar necessidade de tratamento. A pontuação não autoriza, sozinha, alta ou manejo ambulatorial. Unidades de ureia e hemoglobina, definição de comorbidades e cortes de protocolos posteriores precisam corresponder à versão utilizada. A Tabela 2(d) do estudo primário de Dakik 2017 reproduz a faixa de ureia ≥ 10 até ≤ 25 mmol/L com 4 pontos e > 25 mmol/L com 6 pontos; o rótulo local usa ≥ 25 mmol/L para 6 pontos. A tabela original de Blatchford 2000 não foi obtida nesta revisão. A soma de categorias selecionadas foi conferida, mas o limite exato de 25 mmol/L e as faixas arredondadas em mg/dL permanecem sem adjudicação.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.901Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo não traz toda tabela de unidades/faixas, critérios de alta ou corte posterior 0–1; estudos posteriores precisam ser considerados separadamente."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceAnnotationAmendment": {
+        "receipt": "reports/review-20261003/eight-organ-functional-source-corrections-candidate-final26-r4-r2.json",
+        "sourceReview": {
+          "file": "reports/review-20261003/eight-organ-functional-primary-source-review-final26.json",
+          "sha256": "e1a3a85edb2d38e880b320918a3738586221e4c5e7041bc83b51ec7b584385cc"
+        },
+        "declaredEditionBefore": "GBS/Blatchford 2000:8 variáveis, total 0–23, ureianão BUN",
+        "numericEvidenceEdition": "Dakik2017 primary study Table2(d) reproducing GBS; original2000 abstract independently read",
+        "access": "Original2000 PubMed abstract read (1748 derivation/197 validation acuteUGIB). Original table not obtained. Primary2017 PDF downloaded and Table2(d) visually inspected. Stanley2017 primary study read separately; its supplementary scoringTable1 was not obtained.",
+        "findings": [
+          {
+            "status": "reproduction-boundary-difference",
+            "detail": "2017 Table2(d) prints urea≥10 to≤25=4 and>25=6, whereas current schema uses≥25=6. Exact25 and rounded mg/dL ranges are not certified by the selected-point sum test."
+          }
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "rightsApproval": "not-performed"
+      }
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/glasgow-blatchford/calculator.js",
+    "bytes": 5617,
+    "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "91765573fa88d3d7aec7b6bd1df8bc732c85dc0033de9a65413627805f0a6657",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "f2a79c3f790203172453ddc3d39fb553deca497876b6d03231069a3384eac3f3",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "f2a79c3f790203172453ddc3d39fb553deca497876b6d03231069a3384eac3f3",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }
