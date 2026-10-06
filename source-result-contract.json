@@ -1,0 +1,184 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "glasgow-blatchford",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "6b8739179b127133a799ccbf594a58d20d04384a",
+    "oldEngineSha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832",
+    "currentEngineSha256": "7ae24180336fcaacfce458c961d6b00c39546ea0fd974c192aead62bb0bf97a4"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+      "input": {
+        "ureia": "0",
+        "hb": "0",
+        "pas": "0",
+        "fc": true,
+        "melena": false,
+        "sincope": false,
+        "hepat": false,
+        "icc": false
+      },
+      "publicOutput": {
+        "id": "glasgow-blatchford",
+        "main": [
+          "1",
+          "ponto"
+        ],
+        "label": "Glasgow-Blatchford",
+        "raw": {
+          "score": 1
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 1,
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "1",
+          "ponto"
+        ],
+        "label": "Glasgow-Blatchford",
+        "level": "low",
+        "verdict": "Muito baixo risco (0 a 1): candidato a manejo ambulatorial",
+        "note": "Pode ter alta sem endoscopia urgente, com endoscopia ambulatorial (Stanley 2017; ESGE 2021).",
+        "raw": {
+          "score": 1
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Ureia 39–47 e melena: 3 pontos (internar)",
+      "input": {
+        "ureia": "2",
+        "hb": "0",
+        "pas": "0",
+        "melena": true,
+        "fc": false,
+        "sincope": false,
+        "hepat": false,
+        "icc": false
+      },
+      "publicOutput": {
+        "id": "glasgow-blatchford",
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "Glasgow-Blatchford",
+        "raw": {
+          "score": 3
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 3,
+        "level": "mid"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "Glasgow-Blatchford",
+        "level": "mid",
+        "verdict": "Risco não baixo (2 a 6): internar e fazer endoscopia",
+        "note": "Endoscopia em até 24 h após estabilização hemodinâmica.",
+        "raw": {
+          "score": 3
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+      "input": {
+        "ureia": "3",
+        "hb": "3",
+        "pas": "0",
+        "fc": true,
+        "melena": false,
+        "sincope": false,
+        "hepat": false,
+        "icc": false
+      },
+      "publicOutput": {
+        "id": "glasgow-blatchford",
+        "main": [
+          "7",
+          "pontos"
+        ],
+        "label": "Glasgow-Blatchford",
+        "raw": {
+          "score": 7
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 7,
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "7",
+          "pontos"
+        ],
+        "label": "Glasgow-Blatchford",
+        "level": "high",
+        "verdict": "Risco alto (≥ 7): maior chance de precisar de terapia endoscópica",
+        "note": "Corte ótimo para prever tratamento endoscópico (Stanley 2017). Estabilizar, transfundir se Hb &lt; 7 g/dL (ou &lt; 8 g/dL com doença cardiovascular) e endoscopia em até 24 h.",
+        "raw": {
+          "score": 7
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    }
+  ]
+}

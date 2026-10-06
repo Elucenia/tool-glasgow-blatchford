@@ -1,0 +1,537 @@
+{
+  "id": "glasgow-blatchford",
+  "implementationVersion": "glasgow-blatchford@native-2026-10-05+7ae24180336f",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Muito baixo risco (0 a 1): candidato a manejo ambulatorial",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Pode ter alta sem endoscopia urgente, com endoscopia ambulatorial (Stanley 2017; ESGE 2021).",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 39–47 e melena: 3 pontos (internar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Risco não baixo (2 a 6): internar e fazer endoscopia",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Endoscopia em até 24 h após estabilização hemodinâmica.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Risco alto (≥ 7): maior chance de precisar de terapia endoscópica",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Corte ótimo para prever tratamento endoscópico (Stanley 2017). Estabilizar, transfundir se Hb < 7 g/dL (ou < 8 g/dL com doença cardiovascular) e endoscopia em até 24 h.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Very low risk (0 to 1): candidate for outpatient management",
+            "locale": "en",
+            "template": "documented-authored-987fe6b68e7c09cca15e"
+          },
+          "note": {
+            "text": "May be discharged without urgent endoscopy, with outpatient endoscopy (Stanley 2017; ESGE 2021).",
+            "locale": "en",
+            "template": "documented-authored-dfdba6b1160ba6b336c9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 39–47 e melena: 3 pontos (internar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Not low risk (2 to 6): admit and perform endoscopy",
+            "locale": "en",
+            "template": "documented-authored-73a24d125c6050ce7182"
+          },
+          "note": {
+            "text": "Endoscopy within 24 h after hemodynamic stabilization.",
+            "locale": "en",
+            "template": "documented-authored-329584e8d89f44c30030"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "High risk (≥ 7): greater chance of needing endoscopic therapy",
+            "locale": "en",
+            "template": "documented-authored-7a3c27c6cf0404adb035"
+          },
+          "note": {
+            "text": "Optimal cutoff to predict endoscopic treatment (Stanley 2017). Stabilize, transfuse if Hb < 7 g/dL (or < 8 g/dL with cardiovascular disease) and endoscopy within 24 h.",
+            "locale": "en",
+            "template": "documented-authored-244c908f14afde446336"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Riesgo muy bajo (0 a 1): candidato a manejo ambulatorio",
+            "locale": "es",
+            "template": "documented-authored-987fe6b68e7c09cca15e"
+          },
+          "note": {
+            "text": "Puede recibir el alta sin endoscopia urgente, con endoscopia ambulatoria (Stanley 2017; ESGE 2021).",
+            "locale": "es",
+            "template": "documented-authored-dfdba6b1160ba6b336c9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 39–47 e melena: 3 pontos (internar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Riesgo no bajo (2 a 6): internar y hacer endoscopia",
+            "locale": "es",
+            "template": "documented-authored-73a24d125c6050ce7182"
+          },
+          "note": {
+            "text": "Endoscopia en hasta 24 h después de la estabilización hemodinámica.",
+            "locale": "es",
+            "template": "documented-authored-329584e8d89f44c30030"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Riesgo alto (≥ 7): mayor probabilidad de necesitar terapia endoscópica",
+            "locale": "es",
+            "template": "documented-authored-7a3c27c6cf0404adb035"
+          },
+          "note": {
+            "text": "Punto de corte óptimo para predecir tratamiento endoscópico (Stanley 2017). Estabilizar, transfundir si Hb < 7 g/dL (o < 8 g/dL con enfermedad cardiovascular) y endoscopia en hasta 24 h.",
+            "locale": "es",
+            "template": "documented-authored-244c908f14afde446336"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Très faible risque (0 à 1) : candidat à une prise en charge ambulatoire",
+            "locale": "fr",
+            "template": "documented-authored-987fe6b68e7c09cca15e"
+          },
+          "note": {
+            "text": "Peut sortir sans endoscopie urgente, avec endoscopie ambulatoire (Stanley 2017 ; ESGE 2021).",
+            "locale": "fr",
+            "template": "documented-authored-dfdba6b1160ba6b336c9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 39–47 e melena: 3 pontos (internar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Risque non faible (2 à 6) : hospitaliser et faire une endoscopie",
+            "locale": "fr",
+            "template": "documented-authored-73a24d125c6050ce7182"
+          },
+          "note": {
+            "text": "Endoscopie dans les 24 h après stabilisation hémodynamique.",
+            "locale": "fr",
+            "template": "documented-authored-329584e8d89f44c30030"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Risque élevé (≥ 7) : plus grande probabilité de nécessiter un traitement endoscopique",
+            "locale": "fr",
+            "template": "documented-authored-7a3c27c6cf0404adb035"
+          },
+          "note": {
+            "text": "Seuil optimal pour prédire un traitement endoscopique (Stanley 2017). Stabiliser, transfuser si Hb < 7 g/dL (ou < 8 g/dL en cas de maladie cardiovasculaire) et endoscopie dans les 24 h.",
+            "locale": "fr",
+            "template": "documented-authored-244c908f14afde446336"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Sehr niedriges Risiko (0 bis 1): Kandidat für eine ambulante Behandlung",
+            "locale": "de",
+            "template": "documented-authored-987fe6b68e7c09cca15e"
+          },
+          "note": {
+            "text": "Kann ohne dringliche Endoskopie entlassen werden, mit ambulanter Endoskopie (Stanley 2017; ESGE 2021).",
+            "locale": "de",
+            "template": "documented-authored-dfdba6b1160ba6b336c9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 39–47 e melena: 3 pontos (internar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Nicht niedriges Risiko (2 bis 6): stationär aufnehmen und Endoskopie durchführen",
+            "locale": "de",
+            "template": "documented-authored-73a24d125c6050ce7182"
+          },
+          "note": {
+            "text": "Endoskopie innerhalb von 24 h nach hämodynamischer Stabilisierung.",
+            "locale": "de",
+            "template": "documented-authored-329584e8d89f44c30030"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Hohes Risiko (≥ 7): höhere Wahrscheinlichkeit, eine endoskopische Therapie zu benötigen",
+            "locale": "de",
+            "template": "documented-authored-7a3c27c6cf0404adb035"
+          },
+          "note": {
+            "text": "Optimaler Grenzwert zur Vorhersage einer endoskopischen Behandlung (Stanley 2017). Stabilisieren, transfundieren bei Hb < 7 g/dL (oder < 8 g/dL bei kardiovaskulärer Erkrankung) und Endoskopie innerhalb von 24 h.",
+            "locale": "de",
+            "template": "documented-authored-244c908f14afde446336"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Rischio molto basso (0 a 1): candidato a gestione ambulatoriale",
+            "locale": "it",
+            "template": "documented-authored-987fe6b68e7c09cca15e"
+          },
+          "note": {
+            "text": "Può essere dimesso senza endoscopia urgente, con endoscopia ambulatoriale (Stanley 2017; ESGE 2021).",
+            "locale": "it",
+            "template": "documented-authored-dfdba6b1160ba6b336c9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 39–47 e melena: 3 pontos (internar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Rischio non basso (2 a 6): ricoverare ed eseguire endoscopia",
+            "locale": "it",
+            "template": "documented-authored-73a24d125c6050ce7182"
+          },
+          "note": {
+            "text": "Endoscopia entro 24 h dopo la stabilizzazione emodinamica.",
+            "locale": "it",
+            "template": "documented-authored-329584e8d89f44c30030"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Rischio alto (≥ 7): maggiore probabilità di necessitare di terapia endoscopica",
+            "locale": "it",
+            "template": "documented-authored-7a3c27c6cf0404adb035"
+          },
+          "note": {
+            "text": "Cutoff ottimale per prevedere il trattamento endoscopico (Stanley 2017). Stabilizzare, trasfondere se Hb < 7 g/dL (o < 8 g/dL con malattia cardiovascolare) ed eseguire endoscopia entro 24 h.",
+            "locale": "it",
+            "template": "documented-authored-244c908f14afde446336"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "خطورة منخفضة جدًا (0 إلى 1): مرشح للتدبير في العيادات الخارجية",
+            "locale": "ar",
+            "template": "documented-authored-987fe6b68e7c09cca15e"
+          },
+          "note": {
+            "text": "يمكن إخراجه دون تنظير داخلي عاجل، مع تنظير داخلي في العيادة الخارجية (Stanley 2017؛ ESGE 2021).",
+            "locale": "ar",
+            "template": "documented-authored-dfdba6b1160ba6b336c9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 39–47 e melena: 3 pontos (internar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "خطورة غير منخفضة (2 إلى 6): أدخل المريض واجرِ تنظيرًا داخليًا",
+            "locale": "ar",
+            "template": "documented-authored-73a24d125c6050ce7182"
+          },
+          "note": {
+            "text": "تنظير داخلي خلال 24 h بعد الاستقرار الديناميكي الدموي.",
+            "locale": "ar",
+            "template": "documented-authored-329584e8d89f44c30030"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "خطورة مرتفعة (≥ 7): فرصة أكبر لاحتياج علاج تنظيري",
+            "locale": "ar",
+            "template": "documented-authored-7a3c27c6cf0404adb035"
+          },
+          "note": {
+            "text": "الحد الفاصل الأمثل للتنبؤ بالعلاج التنظيري (Stanley 2017). ثبّت الحالة، وانقل الدم إذا كانت Hb < 7 g/dL (أو < 8 g/dL مع مرض قلبي وعائي) وأجرِ تنظيرًا خلال 24 h.",
+            "locale": "ar",
+            "template": "documented-authored-244c908f14afde446336"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "极低风险（0至1）：可门诊处理",
+            "locale": "zh",
+            "template": "documented-authored-987fe6b68e7c09cca15e"
+          },
+          "note": {
+            "text": "可在无需急诊内镜检查的情况下出院，并安排门诊内镜检查（Stanley 2017；ESGE 2021）。",
+            "locale": "zh",
+            "template": "documented-authored-dfdba6b1160ba6b336c9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 39–47 e melena: 3 pontos (internar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "非低风险（2至6）：住院并行内镜检查",
+            "locale": "zh",
+            "template": "documented-authored-73a24d125c6050ce7182"
+          },
+          "note": {
+            "text": "在血流动力学稳定后24 h内进行内镜检查。",
+            "locale": "zh",
+            "template": "documented-authored-329584e8d89f44c30030"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "高风险（≥ 7）：更可能需要内镜治疗",
+            "locale": "zh",
+            "template": "documented-authored-7a3c27c6cf0404adb035"
+          },
+          "note": {
+            "text": "预测内镜治疗的最佳截点（Stanley 2017）。先稳定，若Hb < 7 g/dL（或合并心血管疾病时 < 8 g/dL）则输血，并在24 h内行内镜检查。",
+            "locale": "zh",
+            "template": "documented-authored-244c908f14afde446336"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "超低リスク（0～1）：外来管理の候補",
+            "locale": "ja",
+            "template": "documented-authored-987fe6b68e7c09cca15e"
+          },
+          "note": {
+            "text": "緊急内視鏡なしで退院可能であり、外来内視鏡を行う（Stanley 2017; ESGE 2021）。",
+            "locale": "ja",
+            "template": "documented-authored-dfdba6b1160ba6b336c9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 39–47 e melena: 3 pontos (internar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低リスクではない（2～6）：入院して内視鏡検査を行う",
+            "locale": "ja",
+            "template": "documented-authored-73a24d125c6050ce7182"
+          },
+          "note": {
+            "text": "血行動態が安定した後24 h以内に内視鏡検査。",
+            "locale": "ja",
+            "template": "documented-authored-329584e8d89f44c30030"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "高リスク（≥ 7）：内視鏡治療が必要となる可能性が高い",
+            "locale": "ja",
+            "template": "documented-authored-7a3c27c6cf0404adb035"
+          },
+          "note": {
+            "text": "内視鏡治療を予測する最適カットオフ（Stanley 2017）。安定化し、Hb < 7 g/dL（または心血管疾患がある場合は < 8 g/dL）なら輸血し、24 h以内に内視鏡検査を行う。",
+            "locale": "ja",
+            "template": "documented-authored-244c908f14afde446336"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Só FC ≥ 100: 1 ponto (alta ambulatorial)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "अत्यंत कम जोखिम (0 से 1): बाह्य रोगी प्रबंधन के लिए उपयुक्त",
+            "locale": "hi",
+            "template": "documented-authored-987fe6b68e7c09cca15e"
+          },
+          "note": {
+            "text": "तत्काल एंडोस्कोपी के बिना छुट्टी दी जा सकती है, आउटपेशेंट एंडोस्कोपी के साथ (Stanley 2017; ESGE 2021)।",
+            "locale": "hi",
+            "template": "documented-authored-dfdba6b1160ba6b336c9"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Ureia 39–47 e melena: 3 pontos (internar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "कम जोखिम नहीं (2 से 6): भर्ती करें और एंडोस्कोपी करें",
+            "locale": "hi",
+            "template": "documented-authored-73a24d125c6050ce7182"
+          },
+          "note": {
+            "text": "हेमोडायनामिक स्थिरीकरण के बाद 24 h के भीतर एंडोस्कोपी।",
+            "locale": "hi",
+            "template": "documented-authored-329584e8d89f44c30030"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Ureia 48–59, homem com Hb 10–11,9 e FC ≥ 100: 7 pontos (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "उच्च जोखिम (≥ 7): एंडोस्कोपिक थेरेपी की आवश्यकता होने की अधिक संभावना",
+            "locale": "hi",
+            "template": "documented-authored-7a3c27c6cf0404adb035"
+          },
+          "note": {
+            "text": "एंडोस्कोपिक उपचार की भविष्यवाणी के लिए इष्टतम कटऑफ (Stanley 2017)। स्थिर करें, यदि Hb < 7 g/dL (या हृदयवाहिकीय रोग के साथ < 8 g/dL) तो रक्तसंचार करें और 24 h के भीतर एंडोस्कोपी करें।",
+            "locale": "hi",
+            "template": "documented-authored-244c908f14afde446336"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

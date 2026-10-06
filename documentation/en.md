@@ -107,3 +107,28 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Very low risk (0 to 1): candidate for outpatient management
+
+May be discharged without urgent endoscopy, with outpatient endoscopy (Stanley 2017; ESGE 2021).
+
+
+### 2
+
+Not low risk (2 to 6): admit and perform endoscopy
+
+Endoscopy within 24 h after hemodynamic stabilization.
+
+
+### 3
+
+High risk (≥ 7): greater chance of needing endoscopic therapy
+
+Optimal cutoff to predict endoscopic treatment (Stanley 2017). Stabilize, transfuse if Hb < 7 g/dL (or < 8 g/dL with cardiovascular disease) and endoscopy within 24 h.
+

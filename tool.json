@@ -319,7 +319,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "GBS/Blatchford 2000:8 variáveis, total 0–23, ureianão BUN",
-    "implementationVersion": "glasgow-blatchford@native-2026-10-03+714ea89f6c4f",
+    "implementationVersion": "glasgow-blatchford@native-2026-10-05+7ae24180336f",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/11073021/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -644,13 +644,41 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832",
+      "implementationHash": "7ae24180336fcaacfce458c961d6b00c39546ea0fd974c192aead62bb0bf97a4",
       "sourceAnnotationAmendment": {
         "receipt": "reports/review-20261003/eight-organ-functional-source-corrections-candidate-final26-r4-r2.json",
         "sourceReviewSha256": "e1a3a85edb2d38e880b320918a3738586221e4c5e7041bc83b51ec7b584385cc",
         "previousMethodVersion": "GBS/Blatchford 2000:8 variáveis, total 0–23, ureianão BUN",
         "scope": "Source-edition and displayed-rubric limitations only; no clinical/instrument-language/rights approval and no arithmetic changes."
-      }
+      },
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "glasgow-blatchford@native-2026-10-03+714ea89f6c4f",
+          "previousImplementationHash": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832",
+          "implementationHash": "7ae24180336fcaacfce458c961d6b00c39546ea0fd974c192aead62bb0bf97a4",
+          "scientificBodySha256": "e85276683115c11c8a08c490b617391606f7137a1aaae50779ecc2e6796ea25d",
+          "metadataContractHash": "7c23f20fb2680a02338999ff96a795a9ba88cac398f43ac8ad888c9849bf78d0",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "O Glasgow-Blatchford de 2000 foi desenvolvido na apresentação inicial de hemorragia digestiva alta para estratificar necessidade de tratamento. A pontuação não autoriza, sozinha, alta ou manejo ambulatorial. Unidades de ureia e hemoglobina, definição de comorbidades e cortes de protocolos posteriores precisam corresponder à versão utilizada. A Tabela 2(d) do estudo primário de Dakik 2017 reproduz a faixa de ureia ≥ 10 até ≤ 25 mmol/L com 4 pontos e > 25 mmol/L com 6 pontos; o rótulo local usa ≥ 25 mmol/L para 6 pontos. A tabela original de Blatchford 2000 não foi obtida nesta revisão. A soma de categorias selecionadas foi conferida, mas o limite exato de 25 mmol/L e as faixas arredondadas em mg/dL permanecem sem adjudicação.",
     "sourceLimitEvidence": {
@@ -689,20 +717,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/glasgow-blatchford/calculator.js",
-    "bytes": 5617,
-    "sha256": "714ea89f6c4f86ed6bcc071e5d9c7d878988cea1313d69834d28e817baf41832"
+    "bytes": 5822,
+    "sha256": "7ae24180336fcaacfce458c961d6b00c39546ea0fd974c192aead62bb0bf97a4"
   },
-  "sourceToolSha256": "91765573fa88d3d7aec7b6bd1df8bc732c85dc0033de9a65413627805f0a6657",
+  "sourceToolSha256": "d687148a605fa940e2c7916646ad8890584fd40645bd103e3f0d09cc9cfc37b0",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "f2a79c3f790203172453ddc3d39fb553deca497876b6d03231069a3384eac3f3",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "f2a79c3f790203172453ddc3d39fb553deca497876b6d03231069a3384eac3f3",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

@@ -107,3 +107,28 @@ Ergebnis der Formel oder Klassifikation. Interpretation, Vorgehen und Anwendbark
 Apache-2.0 gilt nur für den ELUCENIA-Code. Die Rechte an Instrumenten, Veröffentlichungen, Übersetzungen und Daten verbleiben bei den jeweiligen Rechteinhabern. Bewahren Sie LICENSE und NOTICE auf.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Dokumentierte Ergebnisse
+
+Die folgenden Angaben bewahren die Ausgaben der Methode für synthetische Beispiele. Sie stellen keine unabhängige klinische Validierung dar.
+
+### 1
+
+Sehr niedriges Risiko (0 bis 1): Kandidat für eine ambulante Behandlung
+
+Kann ohne dringliche Endoskopie entlassen werden, mit ambulanter Endoskopie (Stanley 2017; ESGE 2021).
+
+
+### 2
+
+Nicht niedriges Risiko (2 bis 6): stationär aufnehmen und Endoskopie durchführen
+
+Endoskopie innerhalb von 24 h nach hämodynamischer Stabilisierung.
+
+
+### 3
+
+Hohes Risiko (≥ 7): höhere Wahrscheinlichkeit, eine endoskopische Therapie zu benötigen
+
+Optimaler Grenzwert zur Vorhersage einer endoskopischen Behandlung (Stanley 2017). Stabilisieren, transfundieren bei Hb < 7 g/dL (oder < 8 g/dL bei kardiovaskulärer Erkrankung) und Endoskopie innerhalb von 24 h.
+

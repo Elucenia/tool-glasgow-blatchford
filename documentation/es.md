@@ -107,3 +107,28 @@ Resultado de la fórmula o clasificación. La interpretación, la conducta y la 
 Apache-2.0 se aplica únicamente al código de ELUCENIA. Los derechos de los instrumentos, publicaciones, traducciones y datos permanecen en manos de sus respectivos titulares. Conserve LICENSE y NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+La información siguiente conserva las salidas del método para ejemplos sintéticos. No constituye una validación clínica independiente.
+
+### 1
+
+Riesgo muy bajo (0 a 1): candidato a manejo ambulatorio
+
+Puede recibir el alta sin endoscopia urgente, con endoscopia ambulatoria (Stanley 2017; ESGE 2021).
+
+
+### 2
+
+Riesgo no bajo (2 a 6): internar y hacer endoscopia
+
+Endoscopia en hasta 24 h después de la estabilización hemodinámica.
+
+
+### 3
+
+Riesgo alto (≥ 7): mayor probabilidad de necesitar terapia endoscópica
+
+Punto de corte óptimo para predecir tratamiento endoscópico (Stanley 2017). Estabilizar, transfundir si Hb < 7 g/dL (o < 8 g/dL con enfermedad cardiovascular) y endoscopia en hasta 24 h.
+

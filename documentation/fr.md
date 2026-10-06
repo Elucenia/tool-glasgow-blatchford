@@ -107,3 +107,28 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Très faible risque (0 à 1) : candidat à une prise en charge ambulatoire
+
+Peut sortir sans endoscopie urgente, avec endoscopie ambulatoire (Stanley 2017 ; ESGE 2021).
+
+
+### 2
+
+Risque non faible (2 à 6) : hospitaliser et faire une endoscopie
+
+Endoscopie dans les 24 h après stabilisation hémodynamique.
+
+
+### 3
+
+Risque élevé (≥ 7) : plus grande probabilité de nécessiter un traitement endoscopique
+
+Seuil optimal pour prédire un traitement endoscopique (Stanley 2017). Stabiliser, transfuser si Hb < 7 g/dL (ou < 8 g/dL en cas de maladie cardiovasculaire) et endoscopie dans les 24 h.
+
